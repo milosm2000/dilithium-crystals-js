@@ -1,6 +1,6 @@
 {
   "name": "dilithium-crystals-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/node/index.js",
   "browser": "dist/dilithium.min.js",
   "files": [
