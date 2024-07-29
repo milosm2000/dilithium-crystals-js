@@ -1,0 +1,28 @@
+{
+  "name": "dilithium-js",
+  "version": "1.0.0",
+  "main": "src/node/index.js",
+  "browser": "dist/dilithium.min.js",
+  "files": [
+    "src",
+    "dist",
+    "dilithium.wasm",
+    "dilithium.js"
+  ],
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [
+    "dilithium",
+    "post-quantum",
+    "cryptography"
+  ],
+  "author": "Miloš Mirković",
+  "license": "ISC",
+  "description": "Dilithium post-quantum cryptography implementation for Node.js and browsers",
+  "devDependencies": {
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
