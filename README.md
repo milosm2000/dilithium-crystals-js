@@ -1,6 +1,6 @@
-# Dilithium-JS
+# dilithium-crystals-js
 
-Dilithium-JS is a JavaScript implementation of the Dilithium post-quantum cryptographic signature scheme. This package provides a unified API for both Node.js and browser environments, offering robust quantum-resistant digital signatures.
+dilithium-crystals-js is a JavaScript implementation of the Dilithium post-quantum cryptographic signature scheme. This package provides a unified API for both Node.js and browser environments, offering robust quantum-resistant digital signatures.
 
 ## Features
 
@@ -14,7 +14,7 @@ Dilithium-JS is a JavaScript implementation of the Dilithium post-quantum crypto
 You can install the package using npm:
 
 ```bash
-npm install dilithium-js
+npm install dilithium-crystals-js
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ npm install dilithium-js
 In a Node.js environment, you can use the package as follows:
 
 ```javascript
-const Dilithium = require("dilithium-js");
+const Dilithium = require("dilithium-crystals-js");
 
 Dilithium.then((dilithium) => {
   // Generate keys
@@ -115,7 +115,7 @@ Verifies a signature.
 
 ## Dilithium Parameter Sets
 
-Dilithium-JS supports all four parameter sets of the Dilithium signature scheme:
+dilithium-crystals-js supports all four parameter sets of the Dilithium signature scheme:
 
 - **0**: Dilithium2 (NIST security level 2)
 - **1**: Dilithium3 (NIST security level 3)
@@ -126,7 +126,7 @@ Choose the appropriate parameter set based on your security requirements.
 
 ## Contributing
 
-Contributions to Dilithium-JS are welcome! Please follow these steps:
+Contributions to dilithium-crystals-js are welcome! Please follow these steps:
 
 1. Fork the repository
 2. Create a new branch for your feature or bug fix
@@ -135,6 +135,6 @@ Contributions to Dilithium-JS are welcome! Please follow these steps:
 
 Please ensure your code adheres to the existing style and includes appropriate test coverage.
 
-If you encounter any issues or have questions about Dilithium-JS, please file an issue on the GitHub repository.
+If you encounter any issues or have questions about dilithium-crystals-js, please file an issue on the GitHub repository.
 
 ## Acknowledgments

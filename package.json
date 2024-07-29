@@ -1,5 +1,5 @@
 {
-  "name": "dilithium-js",
+  "name": "dilithium-crystals-js",
   "version": "1.0.0",
   "main": "src/node/index.js",
   "browser": "dist/dilithium.min.js",
