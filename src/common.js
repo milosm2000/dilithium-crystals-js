@@ -126,12 +126,10 @@ function sign(dilithium, message, privateKey, kind) {
 }
 
 function verify(dilithium, signature, message, publicKey, kind) {
-  console.log("inside verify for kind", kind);
   // Determine the expected sizes based on the Dilithium kind
   const params = DILITHIUM_PARAMS[kind];
   const expectedSignatureSize = params.CRYPTO_BYTES + message.length;
   const expectedPublicKeySize = params.CRYPTO_PUBLICKEYBYTES;
-  console.log("inside verify expectedPublicKeySize", expectedPublicKeySize);
 
   // Validate input sizes
   if (signature.length !== expectedSignatureSize) {
