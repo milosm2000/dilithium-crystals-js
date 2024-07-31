@@ -3,8 +3,12 @@ import { DILITHIUM_PARAMS, generateKeys, sign, verify } from "../common";
 
 // Function to fetch the WebAssembly file
 async function fetchWasm() {
-  console.log(`fetching wasm from /node_modules/dilithium-js/dilithium.wasm`);
-  const response = await fetch("/node_modules/dilithium-js/dilithium.wasm");
+  console.log(
+    `fetching wasm from /node_modules/dilithium-crystals-js/dilithium.wasm`
+  );
+  const response = await fetch(
+    "/node_modules/dilithium-crystals-js/dilithium.wasm"
+  );
   return await response.arrayBuffer();
 }
 
@@ -16,7 +20,7 @@ const createDilithium = () =>
         wasmBinary,
         locateFile: (path) => {
           if (path.endsWith(".wasm")) {
-            return "/node_modules/dilithium-js/dilithium.wasm";
+            return "/node_modules/dilithium-crystals-js/dilithium.wasm";
           }
           return path;
         },
