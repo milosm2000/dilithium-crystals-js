@@ -4,7 +4,8 @@
   "main": "src/node/index.js",
   "browser": "dist/dilithium.min.js",
   "files": [
-    "src",
+    "src/**/*.js",
+    "src/**/*.d.ts",
     "dist",
     "dilithium.wasm",
     "dilithium.js"
