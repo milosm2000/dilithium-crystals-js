@@ -22,6 +22,4 @@ declare const dilithiumModule: Promise<{
   HEAP8: Int8Array;
 }>;
 
-export { DilithiumParams, KeyPair, SignatureResult, VerificationResult };
-
 export = dilithiumModule;
