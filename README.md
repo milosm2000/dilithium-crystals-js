@@ -1,6 +1,6 @@
 # dilithium-crystals-js
 
-dilithium-crystals-js is a JavaScript implementation of the Dilithium post-quantum cryptographic signature scheme. This package provides a unified API for both Node.js and browser environments, offering robust quantum-resistant digital signatures.
+dilithium-crystals-js is a JavaScript implementation of the Dilithium post-quantum cryptographic signature scheme. This package provides a unified API for both Node.js and browser environments, offering robust quantum-resistant digital signatures. It includes TypeScript declarations (.d.ts files) for improved IDE support, type checking, and autocompletion.
 
 ## Features
 
@@ -55,10 +55,15 @@ Dilithium.then((dilithium) => {
 For browser environments, include the minified script in your HTML
 
 ```javascript
-<script src="path/to/dilithium.min.js"></script>;
+import { createDilithium } from "./node_modules/dilithium-crystals-js/dist/dilithium.min.js";
 
-Dilithium.then((dilithium) => {
+async function main() {
+  let dilithium = await createDilithium();
+
+  console.log("Dilithium initialized:", dilithium);
+
   // Generate keys
+
   const kind = 2; // Dilithium2
   const { publicKey, privateKey } = dilithium.generateKeys(kind);
 
@@ -78,8 +83,12 @@ Dilithium.then((dilithium) => {
     "Verification result:",
     verificationResult.result === 0 ? "Valid" : "Invalid"
   );
-});
+}
+
+main();
 ```
+
+Note: Make sure to properly configure your build process to handle ES6 modules and to include the WASM file in your public directory.
 
 ## API Reference
 
