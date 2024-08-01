@@ -6,9 +6,13 @@ module.exports = {
   output: {
     filename: "dilithium.min.js",
     path: path.resolve(__dirname, "dist"),
-    library: "Dilithium",
-    libraryTarget: "umd",
-    globalObject: "this",
+    library: {
+      type: "module",
+    },
+    module: true,
+  },
+  experiments: {
+    outputModule: true,
   },
   mode: "production",
   optimization: {
@@ -21,4 +25,5 @@ module.exports = {
       crypto: false,
     },
   },
+  target: ["web", "es2015"],
 };
