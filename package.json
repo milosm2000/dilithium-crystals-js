@@ -14,9 +14,16 @@
     "build": "webpack"
   },
   "keywords": [
-    "dilithium",
+    "crystals-dilithium",
     "post-quantum",
-    "cryptography"
+    "cryptography",
+    "digital-signature",
+    "lattice-based",
+    "quantum-resistant",
+    "public-key",
+    "crypto-algorithm",
+    "nist-pqc",
+    "authentication"
   ],
   "author": "Miloš Mirković",
   "license": "ISC",
