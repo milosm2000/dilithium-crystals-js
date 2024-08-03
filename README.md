@@ -52,7 +52,19 @@ Dilithium.then((dilithium) => {
 
 ### Browser
 
-For browser environments, include the minified script in your HTML
+To use dilithium-crystals-js in a browser:
+
+1. Ensure `dilithium.wasm` is in your public directory.
+2. Adjust the WASM fetch path in `./browser/index.js`, by default it's set to `node_modules/dilithium-crystals-js/kyber.wasm`:
+
+```javascript
+async function fetchWasm() {
+  return await (await fetch("/path/to/your/dilithium.wasm")).arrayBuffer();
+}
+```
+
+Replace /path/to/your/dilithium.wasm with the actual path where you serve the WASM file.
+Note: Configure your server to serve WASM files with application/wasm MIME type.
 
 ```javascript
 import { createDilithium } from "./node_modules/dilithium-crystals-js/dist/dilithium.min.js";
@@ -132,18 +144,3 @@ dilithium-crystals-js supports all four parameter sets of the Dilithium signatur
 - **3**: Dilithium2-AES (NIST security level 2, AES variant)
 
 Choose the appropriate parameter set based on your security requirements.
-
-## Contributing
-
-Contributions to dilithium-crystals-js are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a new branch for your feature or bug fix
-3. Commit your changes with clear, descriptive commit messages
-4. Push your branch and submit a pull request
-
-Please ensure your code adheres to the existing style and includes appropriate test coverage.
-
-If you encounter any issues or have questions about dilithium-crystals-js, please file an issue on the GitHub repository.
-
-## Acknowledgments
