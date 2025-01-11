@@ -3,24 +3,21 @@ import { DILITHIUM_PARAMS, generateKeys, sign, verify } from "../common";
 
 // Function to fetch the WebAssembly file
 async function fetchWasm() {
-  console.log(
-    `fetching wasm from /node_modules/dilithium-crystals-js/dilithium.wasm`
-  );
-  const response = await fetch(
-    "/node_modules/dilithium-crystals-js/dilithium.wasm"
-  );
+  const wasmUrl = chrome.runtime.getURL("dilithium.wasm");
+  console.log(`Fetching wasm from ${wasmUrl}`);
+  const response = await fetch(wasmUrl);
   return await response.arrayBuffer();
 }
 
 // Create the Dilithium object
-const createDilithium = () =>
+const createDilithium = () => 
   fetchWasm()
     .then((wasmBinary) =>
       dilithiumFactory({
         wasmBinary,
         locateFile: (path) => {
           if (path.endsWith(".wasm")) {
-            return "/node_modules/dilithium-crystals-js/dilithium.wasm";
+            return chrome.runtime.getURL("dilithium.wasm");
           }
           return path;
         },
